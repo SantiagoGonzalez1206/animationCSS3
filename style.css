@@ -3,9 +3,174 @@ body{
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
 }
 
-.sol{
-    float: right;
+
+
+#nube {
+    background: no-repeat url("/imgs/nube.png");
+    width: 500px;
+    height: 500px;
+    position: fixed;
+    right: 0;
+
+    animation-name: nube;
+    animation-duration: 6.5s;
+    animation-delay: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    opacity: 0;
+    z-index: 2;
 }
 
+@keyframes nube {
+    0% {
+        right: 0;
+        opacity: 100%;
+    }
+
+    50% {
+        right: 780px;
+        opacity: 100%;
+    }
+
+    75% {
+        left: 780px;
+        opacity: 100%;
+    }
+
+    100% {
+        left: 0;
+        opacity: 100%;
+    }
+}
+
+#lluvia {
+    background: url("/imgs/gotas.png");
+    width: 312px;
+    height: 321px;
+    position: fixed;
+
+    animation-name: lluvia;
+    animation-duration: 0.5s;
+    animation-delay: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: 5;
+    animation-direction: normal;
+    animation-fill-mode: backwards;
+    opacity: 0;
+}
+
+@keyframes lluvia {
+    0% {
+        right: 880px;
+        top: 20%;
+    }
+
+    100% {
+        right: 880px;
+        top: 90%;
+        opacity: 100%;
+    }
+}
+
+#sol {
+    background: no-repeat url("/imgs/sol.png");
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 326px;
+    height: 326px;
+
+    opacity: 100%;
+    animation-name: sol;
+    animation-duration: 1s;
+    animation-delay: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: backwards;
+    z-index: 1;
+}
+
+@keyframes sol {
+    0% {
+        opacity: 50%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+#flor {
+    background: no-repeat url("/imgs/flor.png");
+    width: 500px;
+    height: 500px;
+    position: fixed;
+    bottom: 0;
+    left: 800px;
+
+    opacity: 0;
+    animation-name: flor;
+    animation-duration: 2s;
+    animation-delay: 9s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+@keyframes flor {
+    0% {
+        opacity: 100%;
+        top: 1000px;
+    }
+
+    50% {
+        opacity: 100%;
+        top: 500px;
+    }
+
+    100% {
+        opacity: 100%;
+        bottom: 130px;
+    }
+}
+
+#mensaje {
+    background: no-repeat url("/imgs/message.png");
+    width: 700px;
+    height: 200px;
+    position: fixed;
+    top: 400px;
+    left: 35%;
+
+    opacity: 0%;
+    animation-name: mensaje;
+    animation-duration: 5s;
+    animation-delay: 11s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+}
+
+@keyframes mensaje {
+    0% {
+        opacity: 0%;
+    }
+
+    50% {
+        opacity: 50%;
+    }
+
+    100% {
+        opacity: 100%;
+        opacity: 0%;
+    }
+}
